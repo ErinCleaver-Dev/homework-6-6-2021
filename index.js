@@ -56,8 +56,16 @@ class LinkList {
 
  }
 
- find() {
+ find(findValue) {
 
+    var current = this.head
+    while (current != null) {
+        if(current.data == findValue) {
+            return `Found ${findValue}`;
+        }
+        current = current.next;
+    }
+    return false;
  }
  remove() {
 
@@ -75,4 +83,5 @@ linkedList.prepend(12);
 linkedList.append(15);
 linkedList.append(45);
 console.log(linkedList);
-
+console.log(linkedList.find(12));
+console.log(linkedList.find(78));
