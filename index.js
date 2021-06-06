@@ -59,7 +59,7 @@ class LinkList {
  find(findValue) {
 
     var current = this.head
-    while (current != null) {
+    while (current.next) {
         console.log(current)
         if(current.element == findValue) {
             return `Found ${findValue}`;
@@ -68,7 +68,19 @@ class LinkList {
     }
     return false;
  }
+
+ // removing the last value
  remove() {
+    if(!this.tail) {
+        return "No values in list"
+    } else {
+        current == this.tail;
+        
+
+    } 
+
+
+
 
  }
  reverse(){
