@@ -56,13 +56,23 @@ class LinkList {
 
  }
 
+ find() {
+
+ }
+ remove() {
+
+ }
+ reverse(){
+
+ }
+
 }
 
 linkedList = new LinkList();
 
-console.log(linkedList.prepend(45));
-console.log(linkedList.prepend(12));
-console.log(linkedList.append(15));
-console.log(linkedList.append(45));
+linkedList.prepend(45);
+linkedList.prepend(12);
+linkedList.append(15);
+linkedList.append(45);
 console.log(linkedList);
 
