@@ -60,7 +60,8 @@ class LinkList {
 
     var current = this.head
     while (current != null) {
-        if(current.data == findValue) {
+        console.log(current)
+        if(current.element == findValue) {
             return `Found ${findValue}`;
         }
         current = current.next;
@@ -81,7 +82,6 @@ linkedList = new LinkList();
 linkedList.prepend(45);
 linkedList.prepend(12);
 linkedList.append(15);
-linkedList.append(45);
+linkedList.find(45);
+linkedList.find(78);
 console.log(linkedList);
-console.log(linkedList.find(12));
-console.log(linkedList.find(78));
