@@ -52,6 +52,7 @@ class LinkList {
         }
         this.tail = current
         this.tail.next = this.node;
+        this.tail.next = null
         this.size ++;
     }
 
@@ -73,22 +74,27 @@ class LinkList {
  }
 
  // removing the last value
- removeLast() {
-    if(!this.tail) {
-        return "No values in list"
+ removeFirst() {
+    if (!this.head) {
+        return;
     } else {
-        let current = this.tail;
-
-        
-
-    } 
-
-
-
+        this.head = this.head.next;
+    }
 
  }
  reverse(){
+    let current = this.head;
+    let previous = null;
+    let temp = null;
 
+    while(current) {
+        temp = current.next;
+        current.next = previous;
+        previous = current;
+        current = temp;
+    }
+
+    return previous
  }
 
 }
@@ -103,4 +109,8 @@ linkedList.append(12);
 
 console.log(linkedList.find(78))
 console.log(linkedList.find(12))
-console.log(JSON.stringify(linkedList));
+console.log(`Find: ${JSON.stringify(linkedList)}`);
+linkedList.removeFirst()
+console.log(`Remove First: ${JSON.stringify(linkedList)}`);
+
+console.log(`\n Reverse: ${JSON.stringify(linkedList.reverse())}`);
